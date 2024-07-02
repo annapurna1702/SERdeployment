@@ -80,7 +80,7 @@ if page == "Home":
 elif page == "About Me":
     st.title("About Me")
     st.write("Hi! I am Annapurna Padmanabhan, a post-graduate student in Digital University, Kerala, India.")
-    st.write("This app was developed as part of my team project in which we trained various models.")
+    st.write("This app was developed on the model that I trained as part of my team project in which the team trained various models.")
     st.write("Feel free to contact me:")
     st.markdown("[GitHub](https://github.com/annapurna1702)")
     st.markdown("[LinkedIn](https://www.linkedin.com/in/annapurnapadmanabhan/)")
