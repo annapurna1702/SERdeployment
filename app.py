@@ -5,6 +5,7 @@ import numpy as np
 import joblib
 import tempfile
 
+np.import_array()
 # Load your SVM model and scaler
 svm_model = joblib.load("SVMexec_modeltesting.pkl")
 scaler = joblib.load("scaler.pkl")
