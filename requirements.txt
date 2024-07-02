@@ -6,4 +6,3 @@ tensorflow
 joblib
 soxr
 mediapipe==0.10.14
-cysoxr
