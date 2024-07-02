@@ -2,8 +2,8 @@ streamlit
 librosa
 numpy
 soundfile
-tensorflow  # or torch if you're using PyTorch
+tensorflow  
 joblib
-mediapipe==0.10.1
+
 
 
