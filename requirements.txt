@@ -5,4 +5,4 @@ soundfile
 tensorflow  
 joblib
 soxr
-sox
+mediapipe==0.10.14
