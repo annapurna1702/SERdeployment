@@ -67,10 +67,10 @@ if page == "Home":
 
             # Display predicted emotion
             if emotion is not None:
-                if emotion == 'notsad':
-                    st.success(f"The predicted emotion is: Not sad")
-                else:
+                if emotion == 'sad':
                     st.success(f"The predicted emotion is: Sad")
+                else:
+                    st.success(f"The predicted emotion is: Not Sad")
             else:
                 st.warning("Unable to predict emotion.")
 
