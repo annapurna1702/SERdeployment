@@ -5,12 +5,12 @@ import numpy as np
 import joblib
 import tempfile
 
-np.import_array()
-# Load your SVM model and scaler
+
+
 svm_model = joblib.load("SVMexec_modeltesting.pkl")
 scaler = joblib.load("scaler.pkl")
 
-# Function to extract features from audio data
+
 def extract_features(audio_data, sr):
     try:
         mfccs = librosa.feature.mfcc(y=audio_data, sr=sr, n_mfcc=13)
@@ -27,7 +27,7 @@ def extract_features(audio_data, sr):
         st.error(f"Error extracting features: {str(e)}")
         return None
 
-# Function to predict emotion from audio data
+
 def predict_emotion(audio_data, sr):
     features = extract_features(audio_data, sr)
     if features is not None:
@@ -37,37 +37,37 @@ def predict_emotion(audio_data, sr):
     else:
         return None
 
-# Set CSS style for the app
+
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# Sidebar navigation
+
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Home", "About Me"])
 
-# Main content based on sidebar selection
+
 if page == "Home":
     st.title("Speech Emotion Recognition for Malayalam Male Voices")
     st.write("This web app processes Malayalam audio files in .wav format, featuring Malayalam male voices. It classifies emotions as sad and not sad.")
 
-    # File upload feature
+    
     uploaded_file = st.file_uploader("Upload an audio file", type=["wav"])
 
     if uploaded_file is not None:
         try:
-            # Save uploaded file to a temporary location
+            
             with tempfile.NamedTemporaryFile(delete=False) as temp_audio_file:
                 temp_audio_file.write(uploaded_file.getbuffer())
                 temp_audio_file_path = temp_audio_file.name
 
-            # Load audio data and sample rate using librosa
+            
             audio_data, sr = librosa.load(temp_audio_file_path, sr=None)
 
-            # Predict emotion
+            
             emotion = predict_emotion(audio_data, sr)
             st.audio(uploaded_file)
 
-            # Display predicted emotion
+            
             if emotion is not None:
                 if emotion == 'notsad':
                     st.success(f"The predicted emotion is: Not sad")
