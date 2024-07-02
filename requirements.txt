@@ -4,5 +4,5 @@ numpy
 soundfile
 tensorflow  
 joblib
-soxr
+soxr==0.3.7
 mediapipe==0.10.14
