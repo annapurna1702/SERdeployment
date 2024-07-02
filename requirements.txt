@@ -4,6 +4,6 @@ numpy
 soundfile
 tensorflow  
 joblib
-
+soxr
 
 
