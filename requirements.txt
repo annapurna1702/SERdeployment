@@ -2,5 +2,7 @@ streamlit
 librosa
 numpy
 soundfile
-torch
 tensorflow
+joblib
+mediapipe==0.10.14
+
