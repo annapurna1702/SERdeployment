@@ -49,7 +49,7 @@ if page == "Home":
     st.write("This web app processes Malayalam audio files in .wav format, featuring Malayalam male voices. It classifies emotions as sad and not sad.")
 
     # Upload audio file
-    uploaded_file = st.file_uploader("Upload an audio file", type=["wav"])
+    uploaded_file = st.file_uploader("Upload an audio file", type=["wav","mp3"])
 
     if uploaded_file is not None:
         try:
